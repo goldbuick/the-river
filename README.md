@@ -39,11 +39,13 @@ Runs the chapter build script in production mode (drafts excluded), TypeScript c
 
 ## Deploy
 
-Push to `main` on GitHub. The workflow in `.github/workflows/deploy.yml` builds with `GITHUB_PAGES=true` and publishes to GitHub Pages at:
+Push to `main` on GitHub. The workflow in `.github/workflows/deploy.yml` builds and publishes to GitHub Pages at:
 
-`https://<username>.github.io/the-river/`
+**https://theriver.media**
 
-Enable GitHub Pages in repo settings (Source: GitHub Actions) on first deploy.
+Set the custom domain in repo Settings → Pages (`theriver.media`). DNS is managed in Cloudflare (apex CNAME or A records to GitHub Pages, proxy off).
+
+The legacy project URL (`https://goldbuick.github.io/the-river/`) is no longer the canonical host after switching the Vite base path to `/`.
 
 ## Stack
 

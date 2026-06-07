@@ -8,7 +8,7 @@ const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: process.env.GITHUB_PAGES === "true" ? "/the-river/" : "/",
+  base: "/",
   resolve: {
     alias: { "@": path.resolve(rootDir, "src") },
   },
