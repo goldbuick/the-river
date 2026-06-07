@@ -39,13 +39,40 @@ Runs the chapter build script in production mode (drafts excluded), TypeScript c
 
 ## Deploy
 
-Push to `main` on GitHub. The workflow in `.github/workflows/deploy.yml` builds and publishes to GitHub Pages at:
+Push to `main` on GitHub. The workflow in `.github/workflows/deploy.yml` builds and publishes to GitHub Pages.
 
-**https://theriver.media**
+**Live site:** https://theriver.media
 
-Set the custom domain in repo Settings → Pages (`theriver.media`). DNS is managed in Cloudflare (apex CNAME or A records to GitHub Pages, proxy off).
+### Custom domain setup
 
-The legacy project URL (`https://goldbuick.github.io/the-river/`) is no longer the canonical host after switching the Vite base path to `/`.
+The repo is already configured for `theriver.media` (`public/CNAME`, Vite `base: "/"`). You finish the rest in GitHub and Cloudflare.
+
+#### 1. GitHub (you)
+
+1. Open [github.com/goldbuick/the-river/settings/pages](https://github.com/goldbuick/the-river/settings/pages)
+2. Under **Custom domain**, enter `theriver.media` and click **Save**
+3. Wait until the DNS check passes (may take minutes after Cloudflare is configured)
+4. Enable **Enforce HTTPS** when the checkbox becomes available
+
+Source should remain **GitHub Actions** (not a branch).
+
+#### 2. Cloudflare (you)
+
+In **theriver.media** → **DNS** → **Records**, add:
+
+| Type | Name | Content | Proxy |
+|------|------|---------|-------|
+| CNAME | `@` | `goldbuick.github.io` | **DNS only** (grey cloud) |
+
+Do not orange-cloud (proxy) this record — GitHub needs direct DNS for certificate issuance.
+
+#### 3. Verify
+
+- GitHub Pages settings show a green checkmark for `theriver.media`
+- https://theriver.media loads the site
+- Enable **Enforce HTTPS** in GitHub once the cert is ready
+
+The legacy URL `https://goldbuick.github.io/the-river/` is no longer the canonical host.
 
 ## Stack
 
