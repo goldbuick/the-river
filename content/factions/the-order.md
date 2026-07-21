@@ -2,28 +2,22 @@
 name: "The Order"
 order: 1
 draft: true
-stance: "Naming what moves"
-summary: "Those who keep watch on the banks and try to hold the river still in words."
+stance: "Time should not be messed with"
+summary: "Fundamentalists who want time left alone — and who are very upset that Dippers exist."
 ---
 
 ## Aims
 
-To keep a record that does not drift. The Order believes the river can be known if watched long enough, written down carefully enough, and kept from being rewritten by rumor.
-
-They do not want the water explained away. They want it fixed in place long enough for memory to agree with itself.
+To keep time as it is. The Order believes time should not be messed with, and they treat any meddling as a violation of something fundamental.
 
 ## Who belongs
 
-People who stay. Not travelers passing through. Those willing to keep watch on the banks, compare notes, and correct one another when yesterday's account no longer matches what the water shows.
-
-No named members yet. Belonging is quieter than a roster — shown in habit more than in title.
+Fundamentalists. People who hold that line without compromise.
 
 ## Relation to the river
 
-They stand at the edge more than they enter. The river is something to observe, measure against the last telling, and protect from careless stories. Crossing is rare; naming is constant.
-
-Where others dissolve into the current, The Order keeps its feet on the banks and its ink dry.
+Their quarrel is less with the water itself than with those who use it to disturb time. Dippers, in particular, provoke them: The Order is very upset that Dippers exist.
 
 ## Notes
 
-Still a draft. Opposed in spirit to groups that treat the river as something to vanish into rather than something to fix in place. Dippers and the Entropy Cult sit nearby in the telling, but The Order does not claim them.
+Still a draft. Capture more as the chapters name how Dippers touch time, and how The Order answers.
