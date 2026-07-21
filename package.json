@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx scripts/build-chapters.ts && vite",
-    "build": "tsx scripts/build-chapters.ts --production && tsc -b && vite build && cp dist/index.html dist/404.html",
+    "dev": "tsx scripts/build-chapters.ts && tsx scripts/build-world.ts && vite",
+    "build": "tsx scripts/build-chapters.ts --production && tsx scripts/build-world.ts --production && tsc -b && vite build && cp dist/index.html dist/404.html",
     "build:chapters": "tsx scripts/build-chapters.ts",
+    "build:world": "tsx scripts/build-world.ts",
     "lint": "eslint .",
     "preview": "vite preview"
   },

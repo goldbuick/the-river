@@ -9,7 +9,7 @@ yarn install
 yarn dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173). The dev server rebuilds `src/generated/chapters.json` from markdown before starting.
+Open [http://localhost:5173](http://localhost:5173). The dev server rebuilds `src/generated/*.json` from markdown before starting.
 
 ## Writing chapters
 
@@ -29,13 +29,41 @@ summary: "Optional teaser for the table of contents"
 
 Filenames become URL slugs (e.g. `01-prologue.md` → `/chapter/01-prologue`).
 
+## Writing world sheets
+
+Public character, location, timeline, glossary, faction, and theme sheets live under `content/`. Copy the `_template.md` in each folder (templates are skipped by the build).
+
+| Collection | Path | Detail URL |
+|---|---|---|
+| Characters | `content/characters/` | `/characters/:slug` |
+| Locations | `content/locations/` | `/locations/:slug` |
+| Timeline | `content/timeline/` | `/timeline/:slug` |
+| Glossary | `content/glossary/` | `/glossary/:slug` |
+| Factions | `content/factions/` | `/factions/:slug` |
+| Themes | `content/themes/` | `/themes/:slug` |
+
+Shared frontmatter:
+
+```yaml
+---
+name: "Sheet Name"
+order: 1
+draft: true
+summary: "Optional teaser for the index"
+---
+```
+
+Collection-specific extras: characters need `role` (optional `aliases`); locations need `kind`; timeline may set `when`; glossary may set `category`; factions may set `stance`.
+
+Browse everything from `/world`. Same draft rules as chapters.
+
 ## Build
 
 ```bash
 yarn build
 ```
 
-Runs the chapter build script in production mode (drafts excluded), TypeScript check, Vite build, and copies `index.html` to `404.html` for GitHub Pages SPA routing.
+Runs the chapter and world build scripts in production mode (drafts excluded), TypeScript check, Vite build, and copies `index.html` to `404.html` for GitHub Pages SPA routing.
 
 ## Deploy
 

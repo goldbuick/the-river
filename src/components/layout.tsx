@@ -13,13 +13,23 @@ export function Layout() {
     <div className="flex min-h-svh flex-col bg-background text-foreground">
       <header className="border-b border-border">
         <div className="mx-auto flex w-full max-w-3xl items-center justify-between gap-4 px-6 py-4">
-          <Link
-            to="/"
-            className="flex items-center gap-2 text-heading font-semibold tracking-[1.5px] uppercase transition-colors hover:text-primary"
-          >
-            <BookOpen className="size-5 text-smui-frost-2" aria-hidden="true" />
-            The River
-          </Link>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-heading font-semibold tracking-[1.5px] uppercase transition-colors hover:text-primary"
+            >
+              <BookOpen className="size-5 text-smui-frost-2" aria-hidden="true" />
+              The River
+            </Link>
+            <nav className="flex items-center gap-4">
+              <Link
+                to="/world"
+                className="text-label tracking-[1.5px] text-muted-foreground uppercase transition-colors hover:text-primary"
+              >
+                World
+              </Link>
+            </nav>
+          </div>
 
           <Button
             type="button"
