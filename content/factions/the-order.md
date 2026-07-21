@@ -16,7 +16,7 @@ Fundamentalists. People who hold that line without compromise.
 
 ## Relation to the river
 
-Their quarrel is less with the water itself than with those who use it to disturb time. Dippers, in particular, provoke them: The Order is very upset that Dippers exist.
+The Order is very upset that Dippers exist.
 
 ## Notes
 
